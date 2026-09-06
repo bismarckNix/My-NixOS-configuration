@@ -6,7 +6,7 @@ LN="tr -d '\n'"
 
 fastfetch
 
-cd ~/Documents/nix-config
+cd ~/nix-config
 
 nix flake update
 sudo nixos-rebuild build --flake .#$(hostname)
