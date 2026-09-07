@@ -139,6 +139,7 @@
     packages = with pkgs; [
       tree
     ];
+    ignoreShellProgramCheck = true;
   };
 
   environment.systemPackages = with pkgs; [
@@ -183,16 +184,23 @@
 
   programs = {
 
-    zsh = {
-      enable = true;
-      autosuggestions.enable = true;
-      syntaxHighlighting.enable = true;
-      histSize = 1000;
-    };
+#    zsh = {
+#      enable = true;
+#      autosuggestions.enable = true;
+#      syntaxHighlighting.enable = true;
+#      histSize = 1000;
+#    };
 
     git.enable = true;
     firefox.enable = true;
     steam.enable = true;
+
+    nh = {
+      enable = true;
+      clean.enable = true;
+      clean.extraArgs = "--keep-since 5d --keep 5";
+      flake = "~/nix-config";
+    };
 
     clash-verge = {
       enable = true;
