@@ -14,6 +14,9 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
+
+    ./modules/noctalia.nix
+    
   ];
 
   nixpkgs = {
@@ -40,18 +43,6 @@
   home = {
     username = "bismarck";
     homeDirectory = "/home/bismarck";
-
-    xdg.mimeApps.enable = true;
-    xdg.mimeApps.defaultApplications = {
-      "application/pdf" = [ "onlyoffice-desktopeditors.desktop"; ]; # Use list for fallbacks
-      "inode/directory" = "nemo.desktop";
-      "application/zip" = "xarchiver.desktop";
-      "application/x-7z-compressed" = "xarchiver.desktop";
-      "application/x-tar" = "xarchiver.desktop";
-      "application/x-tarz" = "xarchiver.desktop";
-      "application/xz" = "xarchiver.desktop";
-      "application/xz-compressed" = "xarchiver.desktop";
-    };
   };
 
   # Add stuff for your user as you see fit:

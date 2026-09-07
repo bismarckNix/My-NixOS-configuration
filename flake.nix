@@ -3,16 +3,11 @@
 
   inputs = {
     # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Home manager
-    home-manager.url = "github:nix-community/home-manager/release-26.05";
+    home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
-    noctalia = {
-      url = "github:noctalia-dev/noctalia";
-      inputs.nixpkgs.follows = "nixpkgs"; # this line is optional, prevents downloading two versions of nixpkgs but disables cache
-    };
 
     umbriel.url = "git+https://github.com/noctalia-dev/umbriel";
 
@@ -21,9 +16,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    freesmlauncher = {
-      url = "github:FreesmTeam/FreesmLauncher";
-    };
+    freesmlauncher.url = "github:FreesmTeam/FreesmLauncher";
+
+    areofyl-fetch.url = "github:areofyl/fetch";
   };
 
   outputs = {

@@ -12,7 +12,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      inputs.noctalia.nixosModules.default
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -169,9 +168,9 @@
     pciutils
     nftables
     onlyoffice-desktopeditors
-    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-    inputs.freesmlauncher.packages.${pkgs.stdenv.hostPlatform.system}.freesmlauncher
+    inputs.freesmlauncher.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.areofyl-fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   programs = {
@@ -193,12 +192,12 @@
       autoStart = true;
     };
 
-    noctalia = {
-      enable = true;
+#    noctalia = {
+#      enable = true;
 
       # Enables NetworkManager, Bluetooth, UPower, and a power profile service.
-      recommendedServices.enable = true;
-    };
+#      recommendedServices.enable = true;
+#    };
     umbriel.enable = true;
   };
 

@@ -1,0 +1,705 @@
+[audio]
+enable_overdrive = true
+enable_sounds = true
+
+[backdrop]
+blur_intensity = 0.19999999552965164
+enabled = true
+
+[bar]
+order = [ "top", "window-left", "window-right" ]
+
+    [bar.top]
+    background_opacity = 0.0
+    capsule = true
+    capsule_opacity = 0.69999998435378075
+    capsule_radius = 3
+    center = [ "workspaces" ]
+    end = [ "tray", "status", "notifications", "clipboard", "spacer_long", "group:g3", "spacer_long", "group:g2" ]
+    margin_ends = 0
+    radius = 0
+    shadow = false
+    start = [ "group:g1", "ArchUpdater", "spacer_long", "media" ]
+
+        [bar.top.dead_zone.actions]
+        middle = "settings-open"
+        scroll_down = "workspace-switch next"
+        scroll_up = "workspace-switch prev"
+
+        [[bar.top.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        enabled = true
+        fill = "surface_variant"
+        id = "g1"
+        members = [ "launcher", "line", "date", "line", "clock" ]
+        opacity = 0.69999998807907104
+        padding = 8.0
+        radius = 2.0
+
+        [[bar.top.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        enabled = true
+        fill = "surface_variant"
+        id = "g2"
+        members = [ "control-center", "line", "session" ]
+        opacity = 0.69999998807907104
+        padding = 8.0
+        radius = 3.0
+
+        [[bar.top.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        enabled = true
+        fill = "surface_variant"
+        id = "g3"
+        members = [ "output_volume", "line", "input_volume" ]
+        opacity = 0.69999998807907104
+        padding = 8.0
+        radius = 3.0
+
+    [bar.window-left]
+    auto_hide = true
+    background_opacity = 0.69999998435378075
+    center = [ "window-switch-left", "window-switch-left", "window-switch-left" ]
+    enabled = true
+    end = []
+    position = "left"
+    radius = 3
+    reserve_space = false
+    scale = 1.2500000111758709
+    shadow = false
+    show_on_workspace_switch = false
+    start = []
+    thickness = 10
+
+        [bar.window-left.dead_zone.actions]
+        left = "exec umbriel msg window-focus-left"
+        right = "exec umbriel msg column-move-left"
+
+    [bar.window-right]
+    auto_hide = true
+    background_opacity = 0.69999998435378075
+    center = [ "window-switch-right", "window-switch-right", "window-switch-right" ]
+    enabled = true
+    end = []
+    position = "right"
+    radius = 3
+    reserve_space = false
+    scale = 1.2500000111758709
+    shadow = false
+    show_on_workspace_switch = false
+    start = []
+    thickness = 10
+
+        [bar.window-right.dead_zone.actions]
+        left = "exec umbriel msg window-focus-right"
+        right = "exec umbriel msg column-move-right"
+
+[brightness]
+enable_ddcutil = true
+
+[calendar]
+enabled = true
+
+    [calendar.account.personal]
+    color = "primary"
+    type = "google"
+
+[control_center]
+sidebar = "full"
+width = 800
+
+    [control_center.calendar]
+    show_week_numbers = true
+
+    [[control_center.shortcuts]]
+    type = "wifi"
+
+    [[control_center.shortcuts]]
+    type = "caffeine"
+
+    [[control_center.shortcuts]]
+    type = "nightlight"
+
+    [[control_center.shortcuts]]
+    type = "notification"
+
+    [[control_center.shortcuts]]
+    type = "power_profile"
+
+    [[control_center.shortcuts]]
+    type = "yocraft/custom-shortcut:shortcut"
+
+[desktop_widgets]
+schema_version = 2
+widget_order = [ "desktop-widget-0000000000000001" ]
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000001]
+    box_height = 64.0
+    box_width = 2304.0
+    cx = 960.00006103515625
+    cy = 0.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+        background = false
+        bands = 128
+        show_when_idle = true
+
+[dock]
+background_opacity = 0.4999999888241291
+concave_edge_corners = false
+enabled = false
+launcher_position = "start"
+margin_edge = 12
+pinned = [ "Firefox", "Brave", "Kitty", "VSCodium", "Steam", "Vesktop" ]
+radius = 3
+reserve_space = false
+show_dots = true
+smart_auto_hide = true
+
+[hot_corners]
+delay_ms = 600
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 660.0
+
+[location]
+address = "Khimki, Russia"
+
+[lockscreen]
+blur_intensity = 0.19999999552965164
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@WL-1",
+    "lockscreen-login-box@output-0",
+    "lockscreen-login-box@winit",
+    "lockscreen-login-box@DP-1",
+    "lockscreen-widget-000000000000000b",
+    "lockscreen-widget-000000000000000c",
+    "lockscreen-widget-000000000000000d"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 8
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 128.0
+    box_width = 720.0
+    cx = 960.0
+    cy = 700.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface"
+        background_opacity = 0.0
+        background_radius = 0.0
+        center_password_text = false
+        input_opacity = 0.55000000000000004
+        input_radius = 3.0
+        layout = "regular"
+        show_caps_lock = false
+        show_keyboard_layout = true
+        show_login_button = false
+        show_media = false
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = false
+
+    [lockscreen_widgets.widget."lockscreen-login-box@WL-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 472.0
+    cy = 844.0
+    output = "WL-1"
+    placement_height = 1026.0
+    placement_width = 944.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@WL-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@output-0"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 864.0
+    output = "output-0"
+    placement_height = 1046.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@output-0".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@winit"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 640.0
+    cy = 618.0
+    output = "winit"
+    placement_height = 800.0
+    placement_width = 1280.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@winit".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000000b]
+    box_height = 232.0
+    box_width = 608.0
+    cx = 960.00006103515625
+    cy = 440.00003051757812
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000000b.settings]
+        background = false
+        font_family = "GohuFont uni14 Nerd Font Mono"
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000000c]
+    box_height = 120.0
+    box_width = 576.0
+    cx = 960.00006103515625
+    cy = 580.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "label"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000000c.settings]
+        background = false
+        color = "hover"
+        font_family = "GohuFont uni14 Nerd Font Mono"
+        title = "L O C K E D"
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000000d]
+    box_height = 128.0
+    box_width = 2328.0
+    cx = 960.00006103515625
+    cy = 0.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000000d.settings]
+        background = false
+        bands = 128
+        show_when_idle = true
+
+[notification]
+background_opacity = 0.79999998211860657
+filter_order = [ "filter", "filter-2" ]
+
+    [notification.filter.filter]
+    allow_permanent = false
+    allowed_urgencies = [ "critical" ]
+    bypass_dnd = false
+    enabled = true
+    match = "crash reporting system"
+    play_sound = false
+    save_history = false
+    show_toast = false
+
+    [notification.filter.filter-2]
+    allow_permanent = false
+    allowed_urgencies = [ "normal" ]
+    bypass_dnd = false
+    enabled = true
+    match = "discord"
+    play_sound = false
+    save_history = false
+    show_toast = false
+
+[osd]
+background_opacity = 0.79999998211860657
+border = false
+orientation = "vertical"
+position_vertical = "top_right"
+
+    [osd.kinds]
+    media = false
+
+[plugin_settings."aabidk20/yt-music"]
+mini_open_near_click = true
+panel_open_near_click = true
+
+[plugin_settings."aristides/udiskie"]
+manager_open_near_click = true
+
+[plugin_settings."arrifat346afs/systempulse"]
+panel_placement = "floating"
+panel_position = "auto"
+
+[plugin_settings."imjustdoingmypart/niri-animations"]
+docked_placement = "floating"
+
+[plugin_settings."noctalia/mpvpaper"]
+picker_placement = "floating"
+
+[plugin_settings."noctalia/wallhaven"]
+browser_placement = "floating"
+
+[plugin_settings."radimous/prismlauncher-instances"]
+prism_path = "~/.local/share/PolyMC"
+
+[plugin_settings."raycursive/discord-voice"]
+discord_binary = "/usr/bin/vesktop"
+panel_placement = "floating"
+
+[plugin_settings."yocraft/custom-shortcut"]
+icon = "brain"
+label = "LLM"
+onclick_cmd = "kitty -e \"$HOME/Projects/Scripts/llm.sh\""
+
+[plugin_settings."yuuto/arch-updater"]
+aur_helper = "paru"
+auto_check_hours = 2
+notify_on_updates = false
+panel_placement = "floating"
+show_activity_graph = true
+terminal = "kitty"
+update_cmd = "~/Projects/Scripts/arch-updater.sh"
+
+[plugin_settings."yuuto/calculator"]
+panel_placement = "floating"
+
+[plugins]
+enabled = [
+    "yuuto/calculator",
+    "noctalia/wallhaven",
+    "tadomika_ari/w-engine",
+    "noctalia/mpvpaper",
+    "noctalia/kaomoji",
+    "imjustdoingmypart/niri-animations",
+    "alexander/screen-toolkit",
+    "noctalia/screen_recorder",
+    "aristides/udiskie",
+    "weinguyen/shell-command",
+    "davemhammer/obsidian",
+    "weinguyen/procmon",
+    "whyoolw/sharednd",
+    "nightwatch75/file-search",
+    "decksters-lab/palette-creator",
+    "raycursive/niri-displays",
+    "noctalia/wallpaper_depth",
+    "yocraft/custom-shortcut",
+    "arrifat346afs/systempulse",
+    "noctalia/umbriel-companion",
+    "kjvdven/case-convert",
+    "notfinaldev/web-search",
+    "aabidk20/yt-music"
+]
+
+[shell]
+button_borders = false
+card_borders = false
+corner_radius_scale = 0.5000000074505806
+input_borders = false
+niri_overview_type_to_launch_enabled = true
+panel_anchor_bar = "top"
+polkit_agent = true
+popup_borders = false
+screen_time_enabled = true
+show_location = false
+
+    [shell.animation]
+    speed = 0.70000001043081284
+
+    [shell.launcher]
+    pinned = [
+        "vscodium",
+        "vesktop",
+        "org.telegram.desktop",
+        "brave-origin",
+        "firefox",
+        "io.github.Soundux",
+        "com.github.th-ch.youtube-music",
+        "org.keepassxc.KeePassXC",
+        "org.mozilla.Thunderbird",
+        "com.github.tchx84.Flatseal",
+        "gimp"
+    ]
+
+        [shell.launcher.providers.emoji]
+        global = false
+
+        [shell.launcher.providers.session]
+        global = false
+
+        [shell.launcher.providers.wallpaper]
+        global = false
+
+        [shell.launcher.providers.windows]
+        global = false
+
+    [shell.mpris]
+    blacklist = [ "Brave Origin" ]
+
+    [shell.panel]
+    borders = false
+    control_center_placement = "floating"
+    list_item_background = true
+    open_near_click_control_center = true
+    session_placement = "floating"
+    transparency_mode = "glass"
+    wallpaper_placement = "floating"
+
+    [shell.screenshot]
+    confirm_region = true
+    directory = "~/Pictures/Screenshots"
+    remember_last_region = true
+
+    [[shell.session.actions]]
+    action = "lock"
+    countdown_seconds = 3.0
+    enabled = true
+    shortcut = "1"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    countdown_seconds = 3.0
+    enabled = true
+    shortcut = "2"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "lock_and_suspend"
+    countdown_seconds = 3.0
+    enabled = true
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    countdown_seconds = 3.0
+    enabled = true
+    shortcut = "4"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    countdown_seconds = 3.0
+    enabled = true
+    shortcut = "5"
+    variant = "destructive"
+
+[theme]
+builtin = "Ayu"
+custom_palette = "catpuccin-mc"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-rainbow"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "niri" ]
+    community_ids = [ "discord", "telegram", "vscode", "steam" ]
+
+        [theme.templates.user.palette_creator_live]
+        input_path = "/home/bismarck/.local/state/noctalia/plugins/materialized/community/palette-creator/templates/live-snapshot.tpl"
+        output_path = "/home/bismarck/.local/state/noctalia/plugin-data/kyle-palette-creator/live-snapshot.json"
+
+[wallpaper]
+directory = "/home/bismarck/Pictures/Wallpapers"
+transition = [ "disc", "fade", "honeycomb", "stripes", "wipe", "zoom" ]
+transition_on_startup = true
+
+    [wallpaper.default]
+    path = "/home/bismarck/Pictures/Wallpapers/catpuccin.jpg"
+
+    [wallpaper.last]
+    path = "/home/bismarck/Pictures/Wallpapers/catpuccin.jpg"
+
+    [wallpaper.monitors.DP-1]
+    path = "/home/bismarck/Pictures/Wallpapers/catpuccin.jpg"
+
+    [[wallpaper.favorite]]
+    builtin_palette = "Ayu"
+    palette_source = "builtin"
+    path = "/home/bismarck/Pictures/Wallpapers/wallhaven-wqyg66.jpg"
+    theme_mode = "dark"
+
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/bismarck/Pictures/Wallpapers/catpuccin.jpg"
+    theme_mode = "dark"
+    wallpaper_scheme = "m3-content"
+
+    [[wallpaper.favorite]]
+    builtin_palette = "Ayu"
+    palette_source = "builtin"
+    path = "/home/bismarck/Pictures/Wallpapers/wallpaper (1).jpg"
+    theme_mode = "dark"
+
+[widget.ArchUpdater]
+glyph = "arrow-big-up-lines-filled"
+type = "custom_button"
+
+    [widget.ArchUpdater.actions]
+    left = "exec kitty -e ~/Projects/Scripts/arch-updater.sh"
+
+[widget.audio_visualizer]
+bands = 128
+width = 1540
+
+[widget.clipboard]
+capsule_radius = "auto"
+
+    [widget.clipboard.actions]
+    right = "panel-toggle yuuto/calculator:panel"
+
+[widget.clock]
+tooltip_format = "{:%x, %H:%M:%S}"
+
+[widget.control-center.actions]
+right = "panel-toggle alexander/screen-toolkit:panel"
+
+[widget.date]
+format = "{:%a, %d %b}"
+tooltip_format = "{:%x, %H:%M:%S}"
+
+[widget.input_volume]
+capsule = true
+capsule_padding = 2
+
+[widget.launcher]
+custom_image = "/home/bismarck/Pictures/Icons/arch.svg"
+custom_image_colorize = true
+scale = 1.25
+
+    [widget.launcher.actions]
+    back = "panel-toggle tadomika_ari/w-engine:w-engine-panel"
+    forward = "panel-toggle noctalia/mpvpaper:picker"
+    right = "panel-toggle noctalia/wallhaven:browser"
+
+[widget.line]
+capsule_padding = 0
+capsule_radius = "auto"
+interactive = false
+scale = 1.1500000000000001
+text = "⏐"
+type = "text"
+
+[widget.media]
+max_length = 160
+show_progress = true
+title_scroll = "always"
+
+[widget.notifications]
+capsule = true
+
+[widget.output_volume]
+capsule_opacity = 0.0
+capsule_padding = 0
+capsule_radius = 3
+
+[widget.session.actions]
+right = "panel-toggle arrifat346afs/systempulse:panel"
+
+[widget.spacer_long]
+length = 24
+type = "spacer"
+
+[widget.status]
+hide_when_empty = true
+type = "aristides/udiskie:status"
+
+[widget.tray]
+capsule_radius = "auto"
+
+[widget.window-switch-left]
+glyph = "arrow-badge-left-filled"
+interactive = false
+type = "custom_button"
+
+[widget.window-switch-right]
+glyph = "arrow-badge-right-filled"
+interactive = false
+type = "custom_button"
+
+[widget.workspaces]
+show_labels = false
