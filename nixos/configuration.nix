@@ -12,7 +12,14 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      inputs.home-manager.nixosModules.home-manager
     ];
+
+  home-manager = {
+    backupFileExtension = "backup";
+    extraSpecialArgs = { inherit inputs; };
+    users.bismarck = import ../home-manager/home.nix;
+  };
 
   # Use the systemd-boot EFI boot loader.
   boot.loader = {
@@ -135,7 +142,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    kitty
+    home-manager
     fastfetch
     starship
     btop
@@ -167,6 +174,7 @@
     ddcutil
     pciutils
     nftables
+    bibata-cursors
     onlyoffice-desktopeditors
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.freesmlauncher.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -184,6 +192,7 @@
 
     git.enable = true;
     firefox.enable = true;
+    steam.enable = true;
 
     clash-verge = {
       enable = true;
