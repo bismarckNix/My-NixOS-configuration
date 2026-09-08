@@ -24,7 +24,7 @@
 
   outputs = { self, nixpkgs, home-manager, umbriel, ... }@inputs: let
   system = "x86_64-linux";
-  homeStateVersion = "24.11";
+  homeStateVersion = "26.05";
   user = "bismarck";
   hosts = [
     { hostname = "nixos"; stateVersion = "26.05"; }
@@ -38,7 +38,7 @@
 
     modules = [
       ./hosts/${hostname}/configuration.nix
-      umbriel.nixosModules.default
+      home-manager.nixosModules.home-manager
     ];
   };
 
