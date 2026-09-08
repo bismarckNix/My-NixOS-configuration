@@ -22,7 +22,7 @@
           margin_ends = 0;
           radius = 0;
           shadow = false;
-          start = [ "group:g1" "ArchUpdater" "spacer_long" "media" ];
+          start = [ "group:g1" "spacer_long" "media" ];
           dead_zone = {
             actions = {
               middle = "settings-open";
@@ -134,7 +134,7 @@
         } {
           type = "power_profile";
         } {
-          type = "yocraft/custom-shortcut:shortcut";
+          type = "weather";
         } ];
       };
       desktop_widgets = {
@@ -170,7 +170,6 @@
         enabled = false;
         launcher_position = "start";
         margin_edge = 12;
-        pinned = [ "Firefox" "Brave" "Kitty" "VSCodium" "Steam" "Vesktop" ];
         radius = 3;
         reserve_space = false;
         show_dots = true;
@@ -222,7 +221,7 @@
             box_height = 128.0;
             box_width = 720.0;
             cx = 960.0;
-            cy = 700.0;
+            cy = 860.0;
             output = "DP-1";
             placement_height = 1080.0;
             placement_width = 1920.0;
@@ -230,15 +229,15 @@
             type = "login_box";
             settings = {
               background_color = "surface";
-              background_opacity = 0.0;
+              background_opacity = 0.8;
               background_radius = 0.0;
               center_password_text = false;
               input_opacity = 0.55;
               input_radius = 3.0;
               layout = "regular";
-              show_caps_lock = false;
+              show_caps_lock = true;
               show_keyboard_layout = true;
-              show_login_button = false;
+              show_login_button = true;
               show_media = false;
               show_session_buttons = true;
               show_unlock_hint = false;
@@ -338,7 +337,7 @@
             type = "clock";
             settings = {
               background = false;
-              font_family = "GohuFont uni14 Nerd Font Mono";
+              font_family = "Unifont";
             };
           };
           lockscreen-widget-000000000000000c = {
@@ -354,7 +353,7 @@
             settings = {
               background = false;
               color = "hover";
-              font_family = "GohuFont uni14 Nerd Font Mono";
+              font_family = "Unifont";
               title = "L O C K E D";
             };
           };
@@ -378,29 +377,6 @@
       };
       notification = {
         background_opacity = 0.8;
-        filter_order = [ "filter" "filter-2" ];
-        filter = {
-          filter = {
-            allow_permanent = false;
-            allowed_urgencies = [ "critical" ];
-            bypass_dnd = false;
-            enabled = true;
-            match = "crash reporting system";
-            play_sound = false;
-            save_history = false;
-            show_toast = false;
-          };
-          filter-2 = {
-            allow_permanent = false;
-            allowed_urgencies = [ "normal" ];
-            bypass_dnd = false;
-            enabled = true;
-            match = "discord";
-            play_sound = false;
-            save_history = false;
-            show_toast = false;
-          };
-        };
       };
       osd = {
         background_opacity = 0.8;
@@ -425,24 +401,21 @@
         "noctalia/wallhaven" = {
           browser_placement = "floating";
         };
-        "yocraft/custom-shortcut" = {
-          icon = "brain";
-          label = "LLM";
-          onclick_cmd = "kitty -e \"$HOME/Projects/Scripts/llm.sh\"";
+        "noctalia/umbriel-companion" = {
+          panel_placement = "floating";
         };
         "yuuto/calculator" = {
           panel_placement = "floating";
         };
       };
       plugins = {
-        enabled = [ "yuuto/calculator" "noctalia/wallhaven" "tadomika_ari/w-engine" "noctalia/mpvpaper" "noctalia/kaomoji" "alexander/screen-toolkit" "noctalia/screen_recorder" "aristides/udiskie" "weinguyen/shell-command" "davemhammer/obsidian" "weinguyen/procmon" "whyoolw/sharednd" "nightwatch75/file-search" "decksters-lab/palette-creator" "noctalia/wallpaper_depth" "yocraft/custom-shortcut" "arrifat346afs/systempulse" "noctalia/umbriel-companion" "kjvdven/case-convert" "notfinaldev/web-search" ];
+        enabled = [ "yuuto/calculator" "noctalia/wallhaven" "noctalia/mpvpaper" "noctalia/kaomoji" "alexander/screen-toolkit" "noctalia/screen_recorder" "aristides/udiskie" "weinguyen/shell-command" "davemhammer/obsidian" "whyoolw/sharednd" "noctalia/wallpaper_depth" "arrifat346afs/systempulse" "kjvdven/case-convert" ];
       };
       shell = {
         button_borders = false;
         card_borders = false;
         corner_radius_scale = 0.5;
         input_borders = false;
-        niri_overview_type_to_launch_enabled = true;
         panel_anchor_bar = "top";
         polkit_agent = true;
         popup_borders = false;
@@ -452,7 +425,6 @@
           speed = 0.7;
         };
         launcher = {
-          pinned = [ "vscodium" "vesktop" "org.telegram.desktop" "brave-origin" "firefox" "io.github.Soundux" "com.github.th-ch.youtube-music" "org.keepassxc.KeePassXC" "org.mozilla.Thunderbird" "com.github.tchx84.Flatseal" "gimp" ];
           providers = {
             emoji = {
               global = false;
@@ -467,9 +439,6 @@
               global = false;
             };
           };
-        };
-        mpris = {
-          blacklist = [ "Brave Origin" ];
         };
         panel = {
           borders = false;
@@ -526,56 +495,22 @@
         source = "wallpaper";
         wallpaper_scheme = "m3-rainbow";
         templates = {
-          builtin_ids = [ "btop" "niri" ];
+          builtin_ids = [ "btop" "kitty" ""];
           community_ids = [ "discord" "telegram" "vscode" "steam" ];
-          user = {
-            palette_creator_live = {
-              input_path = "/home/bismarck/.local/state/noctalia/plugins/materialized/community/palette-creator/templates/live-snapshot.tpl";
-              output_path = "/home/bismarck/.local/state/noctalia/plugin-data/kyle-palette-creator/live-snapshot.json";
-            };
-          };
         };
       };
       wallpaper = {
-        directory = "/home/bismarck/Pictures/Wallpapers";
-        transition = [ "disc" "fade" "honeycomb" "stripes" "wipe" "zoom" ];
-        transition_on_startup = true;
         default = {
-          path = "/home/bismarck/Pictures/Wallpapers/catpuccin.jpg";
+          path = "~/nix-config/pictures/nixos-wallpaper.png";
         };
-        last = {
-          path = "/home/bismarck/Pictures/Wallpapers/catpuccin.jpg";
-        };
-        monitors = {
-          DP-1 = {
-            path = "/home/bismarck/Pictures/Wallpapers/catpuccin.jpg";
-          };
-        };
-        favorite = [ {
-          builtin_palette = "Ayu";
-          palette_source = "builtin";
-          path = "/home/bismarck/Pictures/Wallpapers/wallhaven-wqyg66.jpg";
-          theme_mode = "dark";
-        } {
+        favorite = {
           palette_source = "wallpaper";
-          path = "/home/bismarck/Pictures/Wallpapers/catpuccin.jpg";
+          path = "~/nix-config/pictures/nixos-wallpaper.png";
           theme_mode = "dark";
-          wallpaper_scheme = "m3-content";
-        } {
-          builtin_palette = "Ayu";
-          palette_source = "builtin";
-          path = "/home/bismarck/Pictures/Wallpapers/wallpaper (1).jpg";
-          theme_mode = "dark";
-        } ];
+          wallpaper_scheme = "m3-rainbow";
+        };
       };
       widget = {
-        ArchUpdater = {
-          glyph = "arrow-big-up-lines-filled";
-          type = "custom_button";
-          actions = {
-            left = "exec kitty -e ~/Projects/Scripts/arch-updater.sh";
-          };
-        };
         audio_visualizer = {
           bands = 128;
           width = 1540;
@@ -603,11 +538,10 @@
           capsule_padding = 2;
         };
         launcher = {
-          custom_image = "/home/bismarck/Pictures/Icons/arch.svg";
+          custom_image = "~/nix-config/pictures/nixos.png";
           custom_image_colorize = true;
           scale = 1.25;
           actions = {
-            back = "panel-toggle tadomika_ari/w-engine:w-engine-panel";
             forward = "panel-toggle noctalia/mpvpaper:picker";
             right = "panel-toggle noctalia/wallhaven:browser";
           };

@@ -7,6 +7,8 @@
   lib,
   pkgs,
   inputs,
+  user,
+  hostname,
   ...
 }: {
   imports =
@@ -18,14 +20,14 @@
   home-manager = {
     backupFileExtension = "backup";
     extraSpecialArgs = { inherit inputs; };
-    users.bismarck = import ../home-manager/home.nix;
+    users.bismarck = import ../../home-manager/home.nix;
   };
 
   # Use the systemd-boot EFI boot loader.
   boot.loader = {
     efi.canTouchEfiVariables = true;
     systemd-boot.enable = true;
-    timeout = 0;
+    timeout = 10;
   };
 
   # Set the kernel version.
@@ -199,7 +201,7 @@
       enable = true;
       clean.enable = true;
       clean.extraArgs = "--keep-since 5d --keep 5";
-      flake = "~/nix-config";
+      flake = "/home/${user}/nix-config";
     };
 
     clash-verge = {

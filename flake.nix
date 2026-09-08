@@ -21,39 +21,43 @@
     areofyl-fetch.url = "github:areofyl/fetch";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    umbriel,
-    ...
-  } @ inputs: let
-  in {
-    # NixOS configuration entrypoint
-    # Available through 'nixos-rebuild --flake .#your-hostname'
-    nixosConfigurations = {
-      # FIXME replace with your hostname
-      nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
-        # > Our main nixos configuration file <
-        modules = [
-	        ./nixos/configuration.nix
-	        umbriel.nixosModules.default
-	      ];
-      };
+  outputs = { self, nixpkgs, home-manager, umbriel, ... }@inputs: let
+  system = "x86_64-linux";
+  homeStateVersion = "24.11";
+  user = "bismarck";
+  hosts = [
+    { hostname = "nixos"; stateVersion = "26.05"; }
+  ];
+
+  makeSystem = { hostname, stateVersion }: nixpkgs.lib.nixosSystem {
+    system = system;
+    specialArgs = {
+      inherit inputs stateVersion hostname user;
     };
 
-    # Standalone home-manager configuration entrypoint
-    # Available through 'home-manager --flake .#your-username@your-hostname'
-    homeConfigurations = {
-      # FIXME replace with your username@hostname
-      "bismarck@nixos" = home-manager.lib.homeManagerConfiguration {
-        # Home-manager requires 'pkgs' instance
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecture 
-        extraSpecialArgs = {inherit inputs;};
-        # > Our main home-manager configuration file <
-        modules = [./home-manager/home.nix];
+    modules = [
+      ./hosts/${hostname}/configuration.nix
+      umbriel.nixosModules.default
+    ];
+  };
+
+  in {
+    nixosConfigurations = nixpkgs.lib.foldl' (configs: host:
+      configs // {
+        "${host.hostname}" = makeSystem {
+          inherit (host) hostname stateVersion;
+        };
+      }) {} hosts;
+
+    homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
+      pkgs = nixpkgs.legacyPackages.${system};
+      extraSpecialArgs = {
+        inherit inputs homeStateVersion user;
       };
+
+      modules = [
+        ./home-manager/home.nix
+      ];
     };
   };
 }
