@@ -1,5 +1,5 @@
 {
-  description = "Your new nix config";
+  description = "My NixOS configuration";
 
   inputs = {
     # Nixpkgs
@@ -9,16 +9,17 @@
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    # Packages
+    areofyl-fetch.url = "github:areofyl/fetch";
+
+    freesmlauncher.url = "github:FreesmTeam/FreesmLauncher";
+
     umbriel.url = "git+https://github.com/noctalia-dev/umbriel";
 
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    freesmlauncher.url = "github:FreesmTeam/FreesmLauncher";
-
-    areofyl-fetch.url = "github:areofyl/fetch";
   };
 
   outputs = { self, nixpkgs, home-manager, umbriel, ... }@inputs: let

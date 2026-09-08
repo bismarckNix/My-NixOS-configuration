@@ -1,6 +1,7 @@
 {
   programs.noctalia = {
 	enable = true;
+
 	settings = {
       audio = {
         enable_overdrive = true;
@@ -503,6 +504,7 @@
         default = {
           path = "~/nix-config/pictures/nixos-wallpaper.png";
         };
+        directory = "/home/bismarck/Pictures/Wallpapers";
         favorite = {
           palette_source = "wallpaper";
           path = "~/nix-config/pictures/nixos-wallpaper.png";
