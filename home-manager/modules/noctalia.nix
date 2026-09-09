@@ -23,7 +23,7 @@
           margin_ends = 0;
           radius = 0;
           shadow = false;
-          start = [ "group:g1" "spacer_long" "media" ];
+          start = [ "group:g1" "spacer_long" "avivbintangaringga/nix-monitor:nix-monitor" "media" ];
           dead_zone = {
             actions = {
               middle = "settings-open";
@@ -396,6 +396,9 @@
           panel_placement = "floating";
           panel_position = "auto";
         };
+        "avivbintangaringga/nix-monitor" = {
+          panel_placement = "floating";
+        };
         "noctalia/mpvpaper" = {
           picker_placement = "floating";
         };
@@ -410,7 +413,17 @@
         };
       };
       plugins = {
-        enabled = [ "yuuto/calculator" "noctalia/wallhaven" "noctalia/mpvpaper" "noctalia/kaomoji" "alexander/screen-toolkit" "noctalia/screen_recorder" "aristides/udiskie" "weinguyen/shell-command" "davemhammer/obsidian" "whyoolw/sharednd" "noctalia/wallpaper_depth" "arrifat346afs/systempulse" "kjvdven/case-convert" ];
+        auto_update = "all";
+        enabled = [ "yuuto/calculator" "noctalia/wallhaven" "noctalia/mpvpaper" "noctalia/kaomoji" "alexander/screen-toolkit" "noctalia/screen_recorder" "aristides/udiskie" "weinguyen/shell-command" "davemhammer/obsidian" "whyoolw/sharednd" "noctalia/wallpaper_depth" "arrifat346afs/systempulse" "kjvdven/case-convert" "avivbintangaringga/nix-monitor" ];
+        source = [ {
+          kind = "git";
+          location = "https://github.com/noctalia-dev/official-plugins";
+          name = "official";
+        } {
+          kind = "git";
+          location = "https://github.com/noctalia-dev/community-plugins";
+          name = "community";
+        } ];
       };
       shell = {
         button_borders = false;
@@ -560,6 +573,11 @@
           max_length = 160;
           show_progress = true;
           title_scroll = "always";
+        };
+        "avivbintangaringga/nix-monitor:nix-monitor" = {
+          colorize_glyph = false;
+          show_text = false;
+          up_to_date_glyph = "square-rounded-check";
         };
         notifications = {
           capsule = true;

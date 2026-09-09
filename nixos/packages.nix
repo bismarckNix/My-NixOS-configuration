@@ -10,5 +10,11 @@
     };
 
     umbriel.enable = true;
+    noctalia ={
+      enable = true;
+      recommendedServices.enable = true;
+    };
+
+    ssh.startAgent = true;
   };
 }
