@@ -1,4 +1,13 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+let
+  hplipPatched = pkgs.hplip.overrideAttrs (old: {
+    postInstall = (old.postInstall or "") + ''
+      sed -i 's/URLopener/OpenerDirector/g' $out/share/hplip/base/device.py
+      sed -i 's/\.getcode()/.status()/g' $out/share/hplip/base/device.py
+    '';
+  });
+in
+{  
   services = {
     printing = {
       enable = true;
@@ -12,6 +21,7 @@
     };
 
     flatpak.enable = true;
+    gvfs.enable = true;
 
     desktopManager.plasma6.enable = true;
     displayManager.sddm.enable = true;
@@ -19,4 +29,6 @@
     
     xserver.enable = true;
   };
+
+  environment.systemPackages = [ hplipPatched ];
 }

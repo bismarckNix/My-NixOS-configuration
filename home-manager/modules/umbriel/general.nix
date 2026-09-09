@@ -1,6 +1,4 @@
 {
-	home.file.".config/umbriel/shaders".source = ./shaders;   
-
 	programs.umbriel.settings = {
 		general = {
 			autostart = [ "noctalia" ];

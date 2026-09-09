@@ -3,7 +3,6 @@
     ./audio.nix
     ./bluetooth.nix
     ./boot.nix
-    ./clash-verge.nix
     ./env.nix
     ./home-manager.nix
     ./mime.nix

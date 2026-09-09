@@ -13,8 +13,9 @@
     inputs.areofyl-fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # Files
-    nemo
-    nemo-fileroller
+    (nemo-with-extensions.override {
+      extensions = with pkgs; [ nemo-seahorse ];
+    })
     xarchiver
     udiskie
 
@@ -31,6 +32,7 @@
     # Work
     gimp
     onlyoffice-desktopeditors
+    libreoffice
     vscodium
     vlc
 
@@ -42,11 +44,13 @@
     gpu-screen-recorder
     mpvpaper
     pciutils
+    sshfs
     wget
     
     # Other
     keepassxc
     polkit
+    system-config-printer
 
   ];
 }

@@ -1,3 +1,6 @@
+{ config, ... }: let
+  shaders = "${config.home.homeDirectory}/nix-config/home-manager/modules/umbriel/shaders";
+in
 {
 	programs.umbriel.settings = {
 		animation = {
@@ -9,7 +12,7 @@
 				duration_ms = 200;
 				curve = "easeout";
 				style = "popin";
-				shader = "shaders/roll-drop.glsl";
+				shader = "${shaders}/roll-drop.glsl";
 			};
 			windows_out = {
 				enabled = true;
@@ -21,7 +24,7 @@
 				enabled = true;
 				duration_ms = 250;
 				curve = "snappy";
-				shader = "shaders/squash.glsl";
+				shader = "${shaders}/squash.glsl";
 			};
 			workspaces = {
 				enabled = true;
@@ -45,8 +48,8 @@
 			};
 			border = {
 				enabled = true;
-				duration_ms = 150;
-				curve = "easeout";
+				duration_ms = 200;
+				shader = "${shaders}/border-pulse.glsl";
 			};
 			dim_unfocused = {
 				enabled = false;

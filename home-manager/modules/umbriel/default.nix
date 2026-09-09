@@ -11,5 +11,14 @@
     ./window-rules.nix
   ];
 
-  programs.umbriel.enable = true;
+  programs.umbriel = {
+    enable = true;
+    settings = {
+      include = {
+				files = [
+					"noctalia.toml"
+				];
+			};
+    };
+  };
 }
