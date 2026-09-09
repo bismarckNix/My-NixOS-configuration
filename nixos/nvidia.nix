@@ -12,6 +12,8 @@
       package = config.boot.kernelPackages.nvidiaPackages.latest;
       nvidiaSettings = true;
     };
+
+    i2c.enable = true;
   };
   
   services.xserver.videoDrivers = [ "nvidia" ];
