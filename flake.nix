@@ -22,7 +22,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, umbriel, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: let
   system = "x86_64-linux";
   homeStateVersion = "26.05";
   user = "bismarck";

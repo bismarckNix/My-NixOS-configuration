@@ -1,6 +1,5 @@
 { pkgs, user, ... }: {
   programs.zsh.enable = true;
-  programs.umbriel.enable = true;
 
   users = {
     defaultUserShell = pkgs.zsh;

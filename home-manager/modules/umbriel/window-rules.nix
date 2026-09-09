@@ -5,7 +5,7 @@
 			blur_optimized = true;
 		} {
 			match = {
-				app_id = "^discord$|^vesktop$|^codium$|^firefox$|^brave-browser$|^brave-origin$|zen|^com.github.th_ch.youtube_music$";
+				app_id = "^discord$|^vesktop$|^codium$|^firefox$|^brave-browser$|^brave-origin$|zen|^librewolf$|^com.github.th_ch.youtube_music$";
 			};
 			default_width = 1.0;
 			default_height = 1.0;

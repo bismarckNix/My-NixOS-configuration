@@ -8,7 +8,7 @@
 				enabled = true;
 				duration_ms = 200;
 				curve = "easeout";
-				style = "none";
+				style = "popin";
 				shader = "shaders/roll-drop.glsl";
 			};
 			windows_out = {
@@ -19,7 +19,7 @@
 			};
 			windows_move = {
 				enabled = true;
-				duration_ms = 150;
+				duration_ms = 250;
 				curve = "snappy";
 				shader = "shaders/squash.glsl";
 			};

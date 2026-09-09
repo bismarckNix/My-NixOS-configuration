@@ -10,4 +10,6 @@
     ./output.nix
     ./window-rules.nix
   ];
+
+  programs.umbriel.enable = true;
 }
