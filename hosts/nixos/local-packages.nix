@@ -1,5 +1,6 @@
 { inputs, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
-    inputs.freesmlauncher.packages.${pkgs.stdenv.hostPlatform.system}.default   
+    inputs.freesmlauncher.packages.${pkgs.stdenv.hostPlatform.system}.default
+    android-tools
   ];
 }

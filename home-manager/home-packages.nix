@@ -32,7 +32,6 @@
     # Work
     gimp
     onlyoffice-desktopeditors
-    libreoffice
     vscodium
     vlc
 
@@ -48,6 +47,7 @@
     wget
     
     # Other
+    pear-desktop
     keepassxc
     polkit
     system-config-printer

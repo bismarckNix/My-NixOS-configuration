@@ -176,9 +176,6 @@
         show_dots = true;
         smart_auto_hide = true;
       };
-      hooks = {
-        logging_out = "pkill -9 codium";
-      };
       hot_corners = {
         delay_ms = 600;
       };
