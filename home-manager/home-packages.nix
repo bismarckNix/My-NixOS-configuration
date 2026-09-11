@@ -31,6 +31,7 @@
 
     # Work
     gimp
+    obsidian
     onlyoffice-desktopeditors
     vlc
     vscodium
