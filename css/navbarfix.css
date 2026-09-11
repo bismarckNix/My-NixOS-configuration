@@ -2,3 +2,7 @@
 ytmusic-guide-renderer#mini-guide-renderer.style-scope.ytmusic-app {
   padding-top: 32px !important;
 }
+
+div#guide-spacer.style-scope.ytmusic-app {
+  margin-top: 122px !important;
+}
