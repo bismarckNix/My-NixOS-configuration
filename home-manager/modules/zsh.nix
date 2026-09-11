@@ -9,7 +9,6 @@
 
     shellAliases = {
       t = "tmux";
-      rg = "ranger";
       ff = "fastfetch";
       um = "unimatrix -s=95";
       lv = "lavat -r 1";
