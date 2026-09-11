@@ -47,7 +47,7 @@ in
 			};
 			border = {
 				enabled = true;
-				duration_ms = 500;
+				duration_ms = 250;
 				shader = "${shaders}/border-pulse.glsl";
 			};
 			dim_unfocused = {
