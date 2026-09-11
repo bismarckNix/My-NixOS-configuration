@@ -10,4 +10,6 @@
     homeDirectory = "/home/${user}";
     stateVersion = homeStateVersion;
   };
+
+  nixpkgs.config.allowUnfree = true;
 }
