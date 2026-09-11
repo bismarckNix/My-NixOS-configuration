@@ -19,14 +19,14 @@
           capsule_opacity = 0.7;
           capsule_radius = 3;
           center = [ "workspaces" ];
-          end = [ "tray" "status" "notifications" "clipboard" "spacer_long" "group:g3" "spacer_long" "group:g2" ];
+          end = [ "tray" "andrewdems/printers:printer" "status" "notifications" "clipboard" "spacer_long" "group:g3" "spacer_long" "group:g2" ];
           margin_ends = 0;
           radius = 0;
           shadow = false;
           start = [ "group:g1" "spacer_long" "avivbintangaringga/nix-monitor:nix-monitor" "media" ];
           dead_zone = {
             actions = {
-              middle = "settings-open";
+              middle = "settings-toggle";
               scroll_down = "workspace-switch next";
               scroll_up = "workspace-switch prev";
             };
@@ -386,6 +386,17 @@
         };
       };
       plugin_settings = {
+        "alexander/screen-toolkit" = {
+          panel-legacy_open_near_click = true;
+          panel-legacy_position = "auto";
+          panel_open_near_click = true;
+          panel_position = "auto";
+          result_open_near_click = true;
+          result_position = "auto";
+        };
+        "andrewdems/printers" = {
+          panel_placement = "floating";
+        };
         "aristides/udiskie" = {
           manager_open_near_click = true;
         };
@@ -395,6 +406,7 @@
         };
         "avivbintangaringga/nix-monitor" = {
           panel_placement = "floating";
+          update_command = "nh os switch --update $HOME/nix-config";
         };
         "noctalia/mpvpaper" = {
           picker_placement = "floating";
@@ -411,7 +423,7 @@
       };
       plugins = {
         auto_update = "all";
-        enabled = [ "yuuto/calculator" "noctalia/wallhaven" "noctalia/mpvpaper" "noctalia/kaomoji" "alexander/screen-toolkit" "noctalia/screen_recorder" "aristides/udiskie" "weinguyen/shell-command" "davemhammer/obsidian" "whyoolw/sharednd" "noctalia/wallpaper_depth" "arrifat346afs/systempulse" "kjvdven/case-convert" "avivbintangaringga/nix-monitor" ];
+        enabled = [ "yuuto/calculator" "noctalia/wallhaven" "noctalia/mpvpaper" "noctalia/kaomoji" "alexander/screen-toolkit" "noctalia/screen_recorder" "aristides/udiskie" "weinguyen/shell-command" "davemhammer/obsidian" "noctalia/wallpaper_depth" "arrifat346afs/systempulse" "kjvdven/case-convert" "avivbintangaringga/nix-monitor" "andrewdems/printers" ];
         source = [ {
           kind = "git";
           location = "https://github.com/noctalia-dev/official-plugins";
@@ -567,7 +579,7 @@
           type = "text";
         };
         media = {
-          max_length = 160;
+          max_length = 200;
           show_progress = true;
           title_scroll = "always";
         };
