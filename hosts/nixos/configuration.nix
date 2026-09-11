@@ -14,4 +14,6 @@
   networking.hostName = hostname;
 
   system.stateVersion = stateVersion;
+
+  powerManagement.cpuFreqGovernor = "performance";
 }

@@ -9,22 +9,21 @@ in
 			curve = "easeout";
 			windows_in = {
 				enabled = true;
-				duration_ms = 200;
+				duration_ms = 175;
 				curve = "easeout";
 				style = "popin";
 				shader = "${shaders}/roll-drop.glsl";
 			};
 			windows_out = {
 				enabled = true;
-				duration_ms = 150;
+				duration_ms = 100;
 				curve = "easeout";
 				style = "slide";
 			};
 			windows_move = {
 				enabled = true;
-				duration_ms = 250;
+				duration_ms = 100;
 				curve = "snappy";
-				shader = "${shaders}/squash.glsl";
 			};
 			workspaces = {
 				enabled = true;
@@ -48,7 +47,7 @@ in
 			};
 			border = {
 				enabled = true;
-				duration_ms = 200;
+				duration_ms = 500;
 				shader = "${shaders}/border-pulse.glsl";
 			};
 			dim_unfocused = {
