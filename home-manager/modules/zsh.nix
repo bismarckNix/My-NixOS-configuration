@@ -8,6 +8,7 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
+      t = "tmux";
       ff = "fastfetch";
       um = "unimatrix -s=95";
       lv = "lavat -r 1";
@@ -22,8 +23,8 @@
       hms = "nh home switch .";
 
       gs = "git status";
-      ga = "git add";
-      gc = "git commit";
+      ga = "git add .";
+      gc = "git commit .";
       gp = "git push";
 
       ".." = "cd ..";
