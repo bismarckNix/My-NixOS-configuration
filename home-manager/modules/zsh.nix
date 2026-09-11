@@ -9,6 +9,11 @@
 
     shellAliases = {
       ff = "fastfetch";
+      um = "unimatrix -s=95";
+      lv = "lavat -r 1";
+      cv = "cava";
+      pi = "pipes.sh";
+      cl = "tty-clock -c";
       clr = "clear && fastfetch";
       fl = " cd ~/nix-config";
 
@@ -22,6 +27,7 @@
       gp = "git push";
 
       ".." = "cd ..";
+      
     };
 
     history.size = 10000;
