@@ -6,6 +6,7 @@
     ./kitty.nix
     ./noctalia.nix
     ./starship.nix
+    ./tmux.nix
     ./zsh.nix
   ];
 }
