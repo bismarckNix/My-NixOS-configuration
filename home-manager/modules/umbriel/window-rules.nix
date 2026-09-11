@@ -51,7 +51,7 @@
 			default_size = [ 1020 900 ];
 		} {
 			match = {
-				app_id = "^dev.noctalia.UmbrielSharePicker$";
+				app_id = "^dev.noctalia.UmbrielSharePicker$|^xdg-desktop-portal-gtk$";
 			};
 			default_floating = true;
 			default_size = [ 800 600 ];
