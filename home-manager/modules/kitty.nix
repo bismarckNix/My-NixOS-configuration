@@ -3,7 +3,7 @@
     enable = true;
 
     settings = {
-      font_family       = "JetBrains Mono";
+      font_family       = "Hack Regular";
       font_size         = 14.0;
       bold_font         = "auto";
       italic_font       = "auto";
