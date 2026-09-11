@@ -2,5 +2,6 @@
   environment.systemPackages = with pkgs; [
     inputs.freesmlauncher.packages.${pkgs.stdenv.hostPlatform.system}.default
     android-tools
+    universal-android-debloater
   ];
 }
