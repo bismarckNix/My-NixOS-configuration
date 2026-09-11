@@ -423,7 +423,7 @@
       };
       plugins = {
         auto_update = "all";
-        enabled = [ "yuuto/calculator" "noctalia/wallhaven" "noctalia/mpvpaper" "noctalia/kaomoji" "alexander/screen-toolkit" "noctalia/screen_recorder" "aristides/udiskie" "weinguyen/shell-command" "davemhammer/obsidian" "noctalia/wallpaper_depth" "arrifat346afs/systempulse" "kjvdven/case-convert" "avivbintangaringga/nix-monitor" "andrewdems/printers" ];
+        enabled = [ "alexander/screen-toolkit" "andrewdems/printers" "aristides/udiskie" "arrifat346afs/systempulse" "avivbintangaringga/nix-monitor" "davemhammer/obsidian" "kjvdven/case-convert" "noctalia/kaomoji" "noctalia/mpvpaper" "noctalia/screen_recorder" "noctalia/wallhaven" "noctalia/wallpaper_depth" "yuuto/calculator" "weinguyen/shell-command" ];
         source = [ {
           kind = "git";
           location = "https://github.com/noctalia-dev/official-plugins";
@@ -539,6 +539,11 @@
           bands = 128;
           width = 1540;
         };
+        "avivbintangaringga/nix-monitor:nix-monitor" = {
+          colorize_glyph = false;
+          show_text = false;
+          up_to_date_glyph = "square-rounded-check";
+        };
         clipboard = {
           capsule_radius = "auto";
           actions = {
@@ -582,11 +587,6 @@
           max_length = 200;
           show_progress = true;
           title_scroll = "always";
-        };
-        "avivbintangaringga/nix-monitor:nix-monitor" = {
-          colorize_glyph = false;
-          show_text = false;
-          up_to_date_glyph = "square-rounded-check";
         };
         notifications = {
           capsule = true;
