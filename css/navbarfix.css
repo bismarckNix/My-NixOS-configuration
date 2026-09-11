@@ -1,8 +1,4 @@
 /* This CSS fixes the navigation bar cutting off the home button when using the "In-App Menu" plugin for Pear Desktop */
-ytmusic-nav-bar {
-  height: 45px !important;
-}
-
-#nav-bar-background {
-  height: 55px !important;
+ytmusic-guide-renderer#mini-guide-renderer.style-scope.ytmusic-app {
+  padding-top: 32px;
 }
