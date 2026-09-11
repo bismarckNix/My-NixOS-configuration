@@ -16,8 +16,8 @@
     (nemo-with-extensions.override {
       extensions = with pkgs; [ nemo-seahorse ];
     })
-    xarchiver
     udiskie
+    xarchiver
 
     # Browsers
     brave-origin
@@ -32,23 +32,34 @@
     # Work
     gimp
     onlyoffice-desktopeditors
-    vscodium
     vlc
+    vscodium
 
     # Utilities
+    bc
     bibata-cursors
     brightnessctl
     cacert
     ddcutil
+    ffmpeg
     gpu-screen-recorder
+    grim
+    hyprpicker
+    imagemagick
+    jq
+    mpv
     mpvpaper
     pciutils
+    slurp
     sshfs
+    translate-shell
     wget
+    wl-screenrec
+    zbar
     
     # Other
-    pear-desktop
     keepassxc
+    pear-desktop
     polkit
     system-config-printer
 
