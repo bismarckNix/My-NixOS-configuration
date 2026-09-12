@@ -91,8 +91,8 @@
 			"Mod+Ctrl+V" = "spawn:pkill clash-verge";
 
 			# Browsers
-			"Mod+E" = "spawn:librewolf";
-			"Mod+T" = "spawn:zen";
+			"Mod+E" = "spawn:zen";
+			"Mod+T" = "spawn:librewolf";
 			"Mod+B" = "spawn:brave-origin";
 
 			# Media
