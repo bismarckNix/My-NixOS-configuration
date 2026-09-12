@@ -14,8 +14,6 @@
 
     freesmlauncher.url = "github:FreesmTeam/FreesmLauncher";
 
-    mocktail.url = "github:komaruworld/mocktail";
-
     umbriel.url = "git+https://github.com/noctalia-dev/umbriel";
 
     zen-browser = {
