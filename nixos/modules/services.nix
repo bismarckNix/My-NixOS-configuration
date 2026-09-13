@@ -9,24 +9,26 @@ let
 in
 {  
   services = {
-    printing = {
-      enable = true;
-      drivers = [ pkgs.hplipWithPlugin ];
-    };
-
     avahi = {
       enable = true;
       nssmdns4 = true;
       openFirewall = true;
     };
+    
+    desktopManager.plasma6.enable = true;
+    displayManager.sddm.enable = true;
+    displayManager.sddm.wayland.enable = true;
 
     flatpak.enable = true;
     gvfs.enable = true;
 
-    desktopManager.plasma6.enable = true;
-    displayManager.sddm.enable = true;
-    displayManager.sddm.wayland.enable = true;
+    gnome.gnome-keyring.enable = true;
     
+    printing = {
+      enable = true;
+      drivers = [ pkgs.hplipWithPlugin ];
+    };
+
     xserver.enable = true;
   };
 

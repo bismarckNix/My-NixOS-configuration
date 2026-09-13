@@ -9,8 +9,6 @@
       autoStart = true;
     };
 
-    gnome.gnome-keyring.enable = true;
-
     steam = {
       enable = true;
       remotePlay.openFirewall = true;
